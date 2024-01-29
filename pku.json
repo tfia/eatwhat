@@ -1,0 +1,23 @@
+[
+    {"name":"家园一层", "weight":100, "exp":false, "dis":false, "crd":true, "buf":true},
+    {"name":"家园二层", "weight":100, "exp":false, "dis":false, "crd":true, "buf":false},
+    {"name":"家园三层", "weight":100, "exp":false, "dis":false, "crd":false, "buf":false},
+    {"name":"家园四层", "weight":10, "exp":true, "dis":false, "crd":false, "buf":false},
+    {"name":"学五食堂", "weight":100, "exp":false, "dis":false, "crd":false, "buf":false},
+    {"name":"偷火锅", "weight":10, "exp":true, "dis":false, "crd":false, "buf":false},
+    {"name":"松林包子", "weight":100, "exp":false, "dis":false, "crd":false, "buf":false},
+    {"name":"学一食堂", "weight":100, "exp":false, "dis":false, "crd":false, "buf":false},
+    {"name":"农园一层", "weight":50, "exp":false, "dis":false, "crd":true, "buf":true},
+    {"name":"农园二层", "weight":100, "exp":false, "dis":false, "crd":true, "buf":false},
+    {"name":"燕南食堂", "weight":100, "exp":false, "dis":false, "crd":true, "buf":false},
+    {"name":"燕南地下", "weight":100, "exp":false, "dis":false, "crd":false, "buf":true},
+    {"name":"城府园食堂", "weight":50, "exp":false, "dis":true, "crd":false, "buf":false},
+    {"name":"勺园一层", "weight":100, "exp":false, "dis":true, "crd":false, "buf":false},
+    {"name":"勺园二层", "weight":100, "exp":false, "dis":true, "crd":false, "buf":false},
+    {"name":"佟园食堂", "weight":100, "exp":false, "dis":true, "crd":false, "buf":false},
+    {"name":"畅春园一层", "weight":100, "exp":false, "dis":true, "crd":false, "buf":false},
+    {"name":"中关新园食堂", "weight":100, "exp":false, "dis":true, "crd":false, "buf":true},
+    {"name":"畅春园二层", "weight":10, "exp":false, "dis":true, "crd":false, "buf":false},
+    {"name":"学五二层", "weight":10, "exp":false, "dis":false, "crd":false, "buf":false},
+    {"name":"艺园食堂", "weight":10, "exp":true, "dis":false, "crd":false, "buf":false}
+]
