@@ -22,14 +22,27 @@ function initDetials()
 
     // 创建表格内容
     var tbody = $('<tbody>').appendTo('#detailTable');
+    initCheckboxes()
     canteenArr.forEach(function(obj) {
-      var row = $('<tr>').appendTo(tbody);
-      Object.values(obj).forEach(function(value) {
-        var s;
-        if(value === true) s = "Y";
-        else if(value === false) s = "N";
-        else s = value;
-        $('<td>').text(s).appendTo(row);
+        var row;
+        var exed = false;
+        if((exExp && obj.exp) || (exDis && obj.dis) || (exCrd && obj.crd) || (exBuf && obj.buf))
+        {
+            row = $('<tr class="grey">').appendTo(tbody); 
+            exed = true;
+        }
+        else row = $('<tr>').appendTo(tbody); 
+        Object.keys(obj).forEach(function(key) {
+            var value = obj[key];
+            var s;
+            if(value === true) s = "<i class=\"icon checkmark\"></i>";
+            else if(value === false) s = "<i class=\"icon close\"></i>";
+            else s = value;
+            if(key == "name" && exed) s = "<del>" + s + "</del>";
+            if((key == "exp" && value && exExp) || (key == "dis" && value && exDis)
+                || (key == "crd" && value && exCrd) || (key == "buf" && value && exBuf))
+                $('<td class = "left orange marked">').html(s).appendTo(row);
+            else $('<td>').html(s).appendTo(row);
       });
     });
 }
@@ -51,7 +64,6 @@ function showDetails()
 function loadSchool()
 {
     var selected = document.getElementById('schools').value;
-    console.log(selected);
     $("#finalres").text("等待获取抽签结果...");
     canteenArr = [{"name":"err", "weight":100, "exp":false, "dis":false, "crd":false, "buf":false}];
     if(selected != "fff")
@@ -67,7 +79,6 @@ function loadSchool()
             if (xmlhttp.readyState == xmlhttp.DONE)
             {
                 canteenArr = JSON.parse(xmlhttp.responseText);
-                console.log(canteenArr);
                 $("#btnWork").attr("class", "ui primary button");
                 $("#btnShow").attr("class", "ui button");
                 $("#btnWork").attr("disabled", false);
