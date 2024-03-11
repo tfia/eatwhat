@@ -35,8 +35,8 @@ function initDetials()
         Object.keys(obj).forEach(function(key) {
             var value = obj[key];
             var s;
-            if(value === true) s = "<i class=\"icon checkmark\"></i>";
-            else if(value === false) s = "<i class=\"icon close\"></i>";
+            if(value === true) s = "T";
+            else if(value === false) s = "F";
             else s = value;
             if(key == "name" && exed) s = "<del>" + s + "</del>";
             if((key == "exp" && value && exExp) || (key == "dis" && value && exDis)
